@@ -12,18 +12,12 @@ between 2000 and 3200 (both included).The numbers obtained should be printed in 
 
 ---------------------------------------
 Solution:
+
+---------------------------------------
+My:
+```python````
 def exercise1(): 
     return [x for x in range(2000,3200) if x % 7 == 0 and x % 5 !=0] 
-    
-    
-**Main author's Solution: Python 2**
-```python
-l=[]
-for i in range(2000, 3201):
-    if (i%7==0) and (i%5!=0):
-        l.append(str(i))
-
-print ','.join(l)
 ```
 ----------------------------------------
 
@@ -49,12 +43,13 @@ Then, the output should be:40320***
 
 ---------------
 Solution:
+```python
 def factorial(n): 
     rang = [x for x in range(1,n+1)] 
     while len(rang)>1: 
         rang[0] = rang[0] * rang.pop(1) 
     return rang[0] 
-
+```
 
 **Main author's Solution: Python 2**
 ```python
@@ -115,10 +110,12 @@ print fact(x)
 >***In case of input data being supplied to the question, it should be assumed to be a console input.Consider use dict()***
 
 -----------------
+My:
+```python
 In [41]: def dictoutput(n): 
     ...:     return {n:n**2 for n in range(1,n+1)} 
 
-
+```
 
 **Main author's Solution: Python 2**
 ```python
