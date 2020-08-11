@@ -12,12 +12,12 @@ between 2000 and 3200 (both included).The numbers obtained should be printed in 
 
 ---------------------------------------
 Solution:
-
 ---------------------------------------
 My:
-```python````
+```python
 def exercise1(): 
     return [x for x in range(2000,3200) if x % 7 == 0 and x % 5 !=0] 
+
 ```
 ----------------------------------------
 
