@@ -99,6 +99,8 @@ bag,hello,without,world
 ```
 def alphasort(*args):
     return ','.join(sorted([x for x in args]))
+
+a = alphasort('without','hello','bag','world')
 ```
 
 ---
