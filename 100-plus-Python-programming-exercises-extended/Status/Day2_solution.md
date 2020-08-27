@@ -117,7 +117,14 @@ HELLO WORLD
 PRACTICE MAKES PERFECT
 
 ```
-def 
+def capseq():
+    text = ''
+    while True:
+        line = input()
+        if line == '' :
+            break
+        text += line.upper()+'\n'
+    print(text)
 ```
 
 
