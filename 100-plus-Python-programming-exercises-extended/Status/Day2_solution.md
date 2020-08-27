@@ -73,4 +73,16 @@ Then, the output of the program should be:
 
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
 
+```
+def twodim(*args):
+    outp = []
+    for i in range(args[0]):
+        arr = []
+        for j in range(args[1]):
+            arr.append(i * j)
+        outp.apend(arr)
+    return outp
+
+a = twodim(3,5)
+```
 
