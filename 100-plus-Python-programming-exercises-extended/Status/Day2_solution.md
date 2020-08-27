@@ -96,4 +96,11 @@ Then, the output should be:
 
 bag,hello,without,world
 
+```
+def alphasort(*args):
+    return ','.join(sorted([x for x in args]))
+```
+
+---
+
 
