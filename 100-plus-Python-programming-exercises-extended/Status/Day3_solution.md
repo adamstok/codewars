@@ -40,4 +40,9 @@ Write a program, which will find all such numbers between 1000 and 3000 (both in
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
+```
+def alleven():
+    print(','.join([str(x) for x in range(1000,3001) if x % 2 == 0]))
+```
+
 
