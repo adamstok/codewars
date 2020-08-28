@@ -68,5 +68,7 @@ def checkalnum():
             num += 1
     print(f'LETTERS {al} DIGITS {num}')
 ```
+---
+
 
 
