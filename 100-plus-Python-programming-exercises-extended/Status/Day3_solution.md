@@ -57,4 +57,16 @@ Then, the output should be:
 LETTERS 10
 DIGITS 3
 
+```
+def checkalnum():
+    sentence = input()
+    al,num = 0,0
+    for i in sentence:
+        if i.isalpha():
+            al += 1
+        if i.isnumeric():
+            num += 1
+    print(f'LETTERS {al} DIGITS {num}')
+```
+
 
