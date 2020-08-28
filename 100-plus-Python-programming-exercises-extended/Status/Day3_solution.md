@@ -7,4 +7,8 @@ Then, the output should be:
 
 again and hello makes perfect practice world
 
-
+```
+def sortedwords():
+    words = input()
+    return ' '.join(sorted(set(words.split()))
+```
