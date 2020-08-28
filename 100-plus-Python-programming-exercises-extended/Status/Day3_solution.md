@@ -25,4 +25,12 @@ Then the output should be:
 1010
 Notes: Assume the data is input by console.
 
+```
+def divisiblebinary():
+    raw_numbers = input().split(',')
+    divisible = [x for x in raw_numbers if int(x,2) % 5 == 0 ]
+    print(','.join(divisible))
+
+```
+
 
