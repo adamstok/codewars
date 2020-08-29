@@ -27,4 +27,14 @@ Then, the output should be:
 
 11106
 
+```
+def a(num):
+    listed = []
+    for i in range(1,5):
+        listed.append(str(num) * i)
+    return sum([int(x) for x in listed])
+```
+
+---
+
 
