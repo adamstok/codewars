@@ -5,4 +5,9 @@ Then, the output should be:
 
 1,9,25,49,81
 
+```
+def squareodd():
+    numbers = [int(x) for x in input().split(',')]
+    return ','.join([str(x ** 2) for x in numbers if x % 2 != 0])
 
+```
