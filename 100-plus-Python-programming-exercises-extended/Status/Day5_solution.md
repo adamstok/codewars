@@ -29,4 +29,14 @@ Then, the output should be:
 
 500
 
-
+```
+def compute():
+    amount = 0
+    transaction = input().split()
+    for i in range(len(transaction)-1):
+        if transaction[i] == 'D':
+            amount += int(transaction[i+1])
+        elif transaction[i] == 'W':
+            amount -= int(transaction[i+1])
+    return amount
+```
