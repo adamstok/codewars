@@ -4,4 +4,9 @@ Write a program which will find all such numbers which are divisible by 7 but ar
 Hints:
 Consider use range(#begin, #end) method.
 
+```
+def exercise1(): 
+    return [x for x in range(2000,3201) if x % 7 == 0 and x % 5 !=0] 
+```
 
+---
