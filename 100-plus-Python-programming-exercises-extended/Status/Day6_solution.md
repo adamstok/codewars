@@ -20,5 +20,21 @@ Then, the output of the program should be:
 ABd1234@1
 
 ```
+def checkpass():
+    goodpasswords = []
+    passwords = input().split(',')
+    for password in passwords:
+        alpha_lower = sum([1 for x in password if x.islower()]) >= 1
+        alpha_upper = sum([1 for x in password if x.isupper()]) >= 1
+        numeric = sum([1 for x in password if x.isnumeric()]) >= 1
+        symb = sum([1 for x in password if x in ['$','#','@']]) >= 1
+        length = len(password) >= 6 and len(password) <= 12
+        if alpha_lower and alpha_upper and numeric and symb and length:
+            goodpasswords.append(password)
+    print(','.join(goodpasswords))
 
 ```
+
+---
+
+
