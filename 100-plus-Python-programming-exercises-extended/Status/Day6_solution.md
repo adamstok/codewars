@@ -56,4 +56,9 @@ Then, the output of the program should be:
 
 [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 
-
+```
+def asc_tuples():
+    level1 = input().split()
+    level2 = [tuple(x.split(',')) for x in level1]
+    print(sorted(level2))
+```
