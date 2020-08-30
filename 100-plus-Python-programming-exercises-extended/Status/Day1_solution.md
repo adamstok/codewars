@@ -16,4 +16,15 @@ Write a program which can compute the factorial of a given numbers.The results s
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
+```
 
+def factorial(n): 
+    rang = [x for x in range(1,n+1)] 
+    while len(rang)>1: 
+        rang[0] = rang[0] * rang.pop(1) 
+    return rang[0]
+
+```
+
+
+---
