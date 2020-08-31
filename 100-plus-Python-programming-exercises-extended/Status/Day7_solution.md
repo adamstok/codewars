@@ -33,4 +33,20 @@ Then, the output of the program should be:
 
 2
 
+```
+import math
+def moved():
+    x,y = 0,0
+    movements = input().split()
+    for i in range(len(movements)-1):
+        if movements[i] == "UP":
+            y += int(movements[i+1])
+        if movements[i] == "DOWN":
+            y -= int(movements[i+1])
+        if movements[i] == "LEFT":
+            x -= int(movements[i+1])
+        if movements[i] == "RIGHT":
+            x += int(movements[i+1])
+    print(round(math.sqrt(x**2 + y**2 )))
 
+```
