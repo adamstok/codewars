@@ -7,3 +7,12 @@ Define a function with two numbers as arguments. You can compute the sum in the 
 def compute(num1, num2):
     return num1 + num2
 ```
+
+---
+
+Define a function that can convert a integer into a string and print it in console.
+
+Hints:
+Use str() to convert a number to string.
+
+
