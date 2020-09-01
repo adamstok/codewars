@@ -55,4 +55,8 @@ And add document for your own function
 Hints:
 The built-in document method is __doc__
 
-
+```
+def checdoc(func):
+    ''' Print the function documentation '''
+    print(func.__doc__)
+```
