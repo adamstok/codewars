@@ -19,4 +19,14 @@ to:1
 Hints
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-
+```
+def frequency():
+    outp = ''
+    sentence = input().split()
+    keys = sorted({x for x in sentence})
+    values = {x:sentence.count(x) for x in keys}
+    for i in values.items():
+        outp += str(i[0]) + ':' + str(i[1]) + ' '
+    return outp[:-1]
+    
+```
