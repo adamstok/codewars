@@ -19,3 +19,29 @@ Use str() to convert a number to string.
 def tostring(number):
     return str(number)
 ```
+
+---
+
+Define a function that can receive two integer numbers in string form and compute their sum and then print it in console.
+
+Hints:
+Use int() to convert a string to integer.
+
+```
+def computestrings(s1, s2):
+    return int(s1) + int(s2)
+```
+
+---
+
+Define a function that can accept two strings as input and concatenate them and then print it in console.
+
+Hints:
+Use + sign to concatenate the strings.
+
+```
+def addstrings(s1, s2):
+    return s1 + s2
+```
+
+---
