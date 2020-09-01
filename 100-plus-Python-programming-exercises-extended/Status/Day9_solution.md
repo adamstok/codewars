@@ -15,4 +15,7 @@ Define a function that can convert a integer into a string and print it in conso
 Hints:
 Use str() to convert a number to string.
 
-
+```
+def tostring(number):
+    return str(number)
+```
