@@ -4,5 +4,6 @@ Hints:
 Use dict[key]=value pattern to put entry into a dictionary.Use ** operator to get power of a number.Use range() for loops.
 
 ```
-
+def squaredvalues():
+    print({x:x**2 for x in range(1,21)})
 ```
