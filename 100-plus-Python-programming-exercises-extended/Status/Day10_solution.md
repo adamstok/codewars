@@ -15,4 +15,9 @@ Define a function which can generate a dictionary where the keys are numbers bet
 Hints:
 Use dict[key]=value pattern to put entry into a dictionary.Use ** operator to get power of a number.Use range() for loops.Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
 
-
+```
+def generateddict():
+    generated = {x:x**2 for x in range(1,21)}
+    print(generated.keys())
+    
+```
