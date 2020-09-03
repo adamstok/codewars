@@ -17,7 +17,11 @@ Use "for" to iterate the tuple. Use tuple() to generate a tuple from a list.
 
 ```
 values = (1,2,3,4,5,6,7,8,9,10)
-generated = [x for x in values if x % 2 == 0]
+generated = tuple([x for x in values if x % 2 == 0])
 print(generated)
 
 ```
+
+---
+
+
