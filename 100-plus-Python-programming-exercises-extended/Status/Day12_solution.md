@@ -27,4 +27,13 @@ Define a class named American and its subclass NewYorker.
 Hints:
 Use class Subclass(ParentClass) to define a subclass.*
 
+```
+class American:
+    def __init__(self):
+        self.nationality = 'American'
 
+class NewYorker(Amercian):
+    def __init__(self):
+        self.city = 'NY'
+        super().__init__()
+```
