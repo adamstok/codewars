@@ -67,3 +67,6 @@ Write a program which can filter() to make a list whose elements are even number
 Hints:
 Use filter() to filter elements of a list.Use lambda to define anonymous functions.
 
+```
+result = filter(lambda x: x % 2 == 0, [x for x in range(1,21)] )
+```
