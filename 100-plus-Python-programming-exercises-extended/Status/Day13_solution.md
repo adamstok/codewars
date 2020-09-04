@@ -32,4 +32,16 @@ Define a class named Shape and its subclass Square. The Square class has an init
 Hints
 To override a method in super class, we can define a method with the same name in the super class.
 
+```
+class Shape:
+    def area(self):
+        return 0
 
+class Square(Shape):
+    def __init__(self,l):
+        super().__init__()
+        self.length = l
+    def area(self):
+        return self.length ** 2
+
+```
