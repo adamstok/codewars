@@ -28,4 +28,11 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 Use re.findall() to find all substring using regex.
 
+```
+def finddigits():
+    sentence = input().split()
+    print(list(filter(lambda x: x.isdigit() == True, sentence)))
+```
+---
+
 
