@@ -83,4 +83,8 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 Use float() to convert an integer to a float.Even if not converted it wont cause a problem because python by default understands the data type of a value
 
-
+```
+def computen():
+    n = int(input())
+    print(f"{sum([float(x/(x+1)) for x in range(1,n+1)]):.2f}")
+```
