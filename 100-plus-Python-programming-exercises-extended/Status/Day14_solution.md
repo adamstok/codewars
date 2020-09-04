@@ -44,4 +44,6 @@ Use \w to match letters.
 ```
 def getusername(email):
     print(email.split('@')[0])
-                ```
+``` 
+
+---
