@@ -45,3 +45,11 @@ class Square(Shape):
         return self.length ** 2
 
 ```
+---
+
+Please raise a RuntimeError exception.
+
+Hints
+UUse raise() to raise an exception.
+
+
