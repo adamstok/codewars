@@ -15,4 +15,14 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 We can define recursive function in Python.
 
+```
+def fun(n):
+    if n == 0:
+        return 0
+    else:
+        return fun(n-1)+100
+```
+
+---
+
 
