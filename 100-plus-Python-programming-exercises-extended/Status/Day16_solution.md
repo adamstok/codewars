@@ -125,4 +125,11 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 Use yield to produce the next value in generator.
 
+```
+def divisible_gen(n):
+    for _ in range(n+1):
+        if _ % 5 == 0 and _ % 7 == 0:
+            yield _
 
+','.join([str(x) for x in divisible_gen(int(input()))])
+```
