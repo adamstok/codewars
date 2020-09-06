@@ -73,4 +73,19 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 We can define recursive function in Python. Use list comprehension to generate a list from an existing list. Use string.join() to join a list of strings.
 
+```
+def fibo(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibo(n-1) + fibo(n-2)
+
+n = int(input())+1
+print(','.join([str(fibo(x)) for x in range(0,n]))
+
+```
+---
+
 
