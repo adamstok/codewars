@@ -101,4 +101,14 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints
 Use yield to produce the next value in generator.
 
+```
+def even_generator(n):
+    even_nums = list(filter(lambda x: x%2 == 0, range(n+1)))
+    for _ in even_nums:
+        yield _
+
+','.join([str(x) for x in even_generator(int(input()))])
+```
+
+---
 
