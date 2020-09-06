@@ -19,4 +19,6 @@ Then, the output of the program should be:
 Hints
 Use eval() to evaluate an expression.
 
-
+```
+evaluation = print(eval(input()))
+```
