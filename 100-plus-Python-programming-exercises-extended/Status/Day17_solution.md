@@ -3,4 +3,6 @@ Please write assert statements to verify that every number in the list [2,4,6,8]
 Hints
 Use "assert expression" to make assertion.
 
-
+```
+assert list(filter(lambda x:x%2==0,[2,4,6,8])) == [2,4,6,8]
+```
