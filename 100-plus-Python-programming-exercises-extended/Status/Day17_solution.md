@@ -30,4 +30,11 @@ Please write a binary search function which searches an item in a sorted list. T
 Hints
 Use if/elif to deal with conditions.
 
-
+```
+import bisect
+def binary_search(element,l):
+    sorted_list = sorted(l)
+    index = bisect.bisect_left(sorted_list,element)
+    if index < len(sorted_list) and sorted_list[index] == element:
+        return index
+```
