@@ -38,3 +38,11 @@ def binary_search(element,l):
     if index < len(sorted_list) and sorted_list[index] == element:
         return index
 ```
+---
+
+Please generate a random float where the value is between 10 and 100 using Python module.
+
+Hints
+Use random.random() to generate a random float in [0,1].
+
+
