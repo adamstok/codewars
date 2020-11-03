@@ -52,6 +52,8 @@ def hamming(n):
     # a = numbs(1)
     if n == 1:
         return 1
+    if n == 2:
+        return 2
     while len(outp) < n:
         for b in range(2, n**n):
             if len(outp) > n:
