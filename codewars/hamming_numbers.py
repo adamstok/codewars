@@ -26,57 +26,55 @@ def runtime(f):
     return wrap
 
 
+# def numbs(n):
+#     yield n
+#     yield from numbs(n+1) # => max recursion depth exceeded
+
+
+def gotit(n, mod):
+    count = 0
+    if n % mod == 0:
+        count += 1
+        a = n // mod
+        while type(a) == int:
+            if a % mod == 0:
+                a = a // mod
+                count += 1
+            else:
+                a = a / mod
+    return count
+
+
 @runtime
 def hamming(n):
     outp = [0, 1]
-    count_i = 0
-    count_j = 0
-    count_k = 0
+    two, three, five = 0, 0, 0
+    # a = numbs(1)
     if n == 1:
         return 1
-    while True:
-        for i in range(2, n**n):
+    while len(outp) < n:
+        for b in range(2, n**n):
             if len(outp) > n:
+                print(f'{len(outp)} >= {n}')
                 return outp[n]
-            if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
+            if b % 2 != 0 and b % 3 != 0 and b % 5 != 0:
                 pass
             else:
-                if i % 2 == 0:
-                    count_i += 1
-                    a = i // 2
-                    while type(a) == int:
-                        if a % 2 == 0:
-                            a = a // 2
-                            count_i += 1
-                        else:
-                            a = a / 2
-                if i % 3 == 0:
-                    count_j += 1
-                    b = i // 3
-                    while type(b) == int:
-                        if b % 3 == 0:
-                            b = b // 3
-                            count_j += 1
-                        else:
-                            b = b / 3
-                if i % 5 == 0:
-                    count_k += 1
-                    c = i // 5
-                    while type(c) == int:
-                        if c % 5 == 0:
-                            c = c // 5
-                            count_k += 1
-                        else:
-                            c = c / 5
-                if 2**count_i * 3**count_j * 5**count_k == i:
-                    outp.append(i)
-                    count_i = 0
-                    count_j = 0
-                    count_k = 0
+                if b % 2 == 0:
+                    two = gotit(b, 2)
+                if b % 3 == 0:
+                    three = gotit(b, 3)
+                if b % 5 == 0:
+                    five = gotit(b, 5)
+                if 2**two * 3**three * 5**five == b:
+                    outp.append(b)
+                    two, three, five = 0, 0, 0
                 else:
-                    count_i = 0
-                    count_j = 0
-                    count_k = 0
+                    two, three, five = 0, 0, 0
+    return outp[n]
+
+
+print(hamming(300))  # 300 => runtime = 0.1004800
 
 
 # assert hamming(1) == 1
