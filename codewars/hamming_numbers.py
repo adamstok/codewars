@@ -49,34 +49,30 @@ def gotit(n, mod):
 def hamming(n):
     outp = [0, 1]
     two, three, five = 0, 0, 0
-    # a = numbs(1)
-    if n == 1:
-        return 1
-    if n == 2:
-        return 2
-    while len(outp) < n:
-        for b in range(2, n**n):
-            if len(outp) > n:
-                print(f'{len(outp)} >= {n}')
-                return outp[n]
-            if b % 2 != 0 and b % 3 != 0 and b % 5 != 0:
-                pass
+    if 1 <= n <= 2:
+        return n
+    for b in range(2, n**n):
+        if len(outp) > n:
+            print(f'{len(outp)} >= {n}')
+            return outp[n]
+        if b % 2 != 0 and b % 3 != 0 and b % 5 != 0:
+            pass
+        else:
+            if b % 2 == 0:
+                two = gotit(b, 2)
+            if b % 3 == 0:
+                three = gotit(b, 3)
+            if b % 5 == 0:
+                five = gotit(b, 5)
+            if 2**two * 3**three * 5**five == b:
+                outp.append(b)
+                two, three, five = 0, 0, 0
             else:
-                if b % 2 == 0:
-                    two = gotit(b, 2)
-                if b % 3 == 0:
-                    three = gotit(b, 3)
-                if b % 5 == 0:
-                    five = gotit(b, 5)
-                if 2**two * 3**three * 5**five == b:
-                    outp.append(b)
-                    two, three, five = 0, 0, 0
-                else:
-                    two, three, five = 0, 0, 0
+                two, three, five = 0, 0, 0
     return outp[n]
 
 
-print(hamming(300))  # 300 => runtime = 0.1004800
+print(hamming(500))  # 300 => runtime = 0.1004800
 
 
 # assert hamming(1) == 1
