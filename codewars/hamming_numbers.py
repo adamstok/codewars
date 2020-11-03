@@ -13,8 +13,20 @@ The fifth smallest Hamming number is 5 = 203051
 The 20 smallest Hamming numbers are given in example test fixture.
 
 """
+import time
 
 
+def runtime(f):
+    def wrap(*args):
+        t1 = time.time()
+        outp = f(*args)
+        t2 = time.time()
+        print(f'runtime: {t2-t1} sec')
+        return outp
+    return wrap
+
+
+@runtime
 def hamming(n):
     outp = [0, 1]
     count_i = 0
@@ -67,22 +79,22 @@ def hamming(n):
                     count_k = 0
 
 
-assert hamming(1) == 1
-assert hamming(2) == 2
-assert hamming(3) == 3
-assert hamming(4) == 4
-assert hamming(5) == 5
-assert hamming(6) == 6
-assert hamming(7) == 8
-assert hamming(8) == 9
-assert hamming(9) == 10
-assert hamming(10) == 12
-assert hamming(11) == 15
-assert hamming(12) == 16
-assert hamming(13) == 18
-assert hamming(14) == 20
-assert hamming(15) == 24
-assert hamming(16) == 25
-assert hamming(17) == 27
-assert hamming(18) == 30
-assert hamming(19) == 32
+# assert hamming(1) == 1
+# assert hamming(2) == 2
+# assert hamming(3) == 3
+# assert hamming(4) == 4
+# assert hamming(5) == 5
+# assert hamming(6) == 6
+# assert hamming(7) == 8
+# assert hamming(8) == 9
+# assert hamming(9) == 10
+# assert hamming(10) == 12
+# assert hamming(11) == 15
+# assert hamming(12) == 16
+# assert hamming(13) == 18
+# assert hamming(14) == 20
+# assert hamming(15) == 24
+# assert hamming(16) == 25
+# assert hamming(17) == 27
+# assert hamming(18) == 30
+# assert hamming(19) == 32
