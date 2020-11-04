@@ -26,22 +26,11 @@ def runtime(f):
     return wrap
 
 
-# def numbs(n):
-#     yield n
-#     yield from numbs(n+1) # => max recursion depth exceeded
-
-
 def gotit(n, mod):
     count = 0
-    if n % mod == 0:
+    while n % mod == 0:
+        n = n // mod
         count += 1
-        a = n // mod
-        while type(a) == int:
-            if a % mod == 0:
-                a = a // mod
-                count += 1
-            else:
-                a = a / mod
     return count
 
 
@@ -53,44 +42,38 @@ def hamming(n):
         return n
     for b in range(2, n**n):
         if len(outp) > n:
-            print(f'{len(outp)} >= {n}')
             return outp[n]
         if b % 2 != 0 and b % 3 != 0 and b % 5 != 0:
             pass
         else:
-            if b % 2 == 0:
-                two = gotit(b, 2)
-            if b % 3 == 0:
-                three = gotit(b, 3)
-            if b % 5 == 0:
-                five = gotit(b, 5)
+            two = gotit(b, 2)
+            three = gotit(b, 3)
+            five = gotit(b, 5)
             if 2**two * 3**three * 5**five == b:
                 outp.append(b)
-                two, three, five = 0, 0, 0
-            else:
-                two, three, five = 0, 0, 0
+            two, three, five = 0, 0, 0
     return outp[n]
 
 
 print(hamming(500))  # 300 => runtime = 0.1004800
 
 
-# assert hamming(1) == 1
-# assert hamming(2) == 2
-# assert hamming(3) == 3
-# assert hamming(4) == 4
-# assert hamming(5) == 5
-# assert hamming(6) == 6
-# assert hamming(7) == 8
-# assert hamming(8) == 9
-# assert hamming(9) == 10
-# assert hamming(10) == 12
-# assert hamming(11) == 15
-# assert hamming(12) == 16
-# assert hamming(13) == 18
-# assert hamming(14) == 20
-# assert hamming(15) == 24
-# assert hamming(16) == 25
-# assert hamming(17) == 27
-# assert hamming(18) == 30
-# assert hamming(19) == 32
+assert hamming(1) == 1
+assert hamming(2) == 2
+assert hamming(3) == 3
+assert hamming(4) == 4
+assert hamming(5) == 5
+assert hamming(6) == 6
+assert hamming(7) == 8
+assert hamming(8) == 9
+assert hamming(9) == 10
+assert hamming(10) == 12
+assert hamming(11) == 15
+assert hamming(12) == 16
+assert hamming(13) == 18
+assert hamming(14) == 20
+assert hamming(15) == 24
+assert hamming(16) == 25
+assert hamming(17) == 27
+assert hamming(18) == 30
+assert hamming(19) == 32
