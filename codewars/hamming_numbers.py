@@ -55,7 +55,31 @@ def hamming(n):
     return outp[n]
 
 
+def gotit2(n):
+    while n % 5 == 0:
+        n /= 5
+    while n % 3 == 0:
+        n /= 3
+    while n % 2 == 0:
+        n /= 2
+    return n == 1
+
+
+@runtime
+def hamming2(n):
+    s = [1]
+    l = len(s)
+    c = 2
+    while l < n:
+        if gotit2(c):
+            s[-1] = c
+            l += 1
+        c += 1
+    return s[0]
+
+
 print(hamming(500))  # 300 => runtime = 0.1004800
+print(hamming2(500))
 
 
 assert hamming(1) == 1
@@ -77,3 +101,23 @@ assert hamming(16) == 25
 assert hamming(17) == 27
 assert hamming(18) == 30
 assert hamming(19) == 32
+
+assert hamming2(1) == 1
+assert hamming2(2) == 2
+assert hamming2(3) == 3
+assert hamming2(4) == 4
+assert hamming2(5) == 5
+assert hamming2(6) == 6
+assert hamming2(7) == 8
+assert hamming2(8) == 9
+assert hamming2(9) == 10
+assert hamming2(10) == 12
+assert hamming2(11) == 15
+assert hamming2(12) == 16
+assert hamming2(13) == 18
+assert hamming2(14) == 20
+assert hamming2(15) == 24
+assert hamming2(16) == 25
+assert hamming2(17) == 27
+assert hamming2(18) == 30
+assert hamming2(19) == 32
